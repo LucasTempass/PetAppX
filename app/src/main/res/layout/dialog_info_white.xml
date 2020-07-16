@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="264dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_16dp"
+    android:backgroundTint="@color/white2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_name_info"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="1dp">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/map_marker"
+            android:tint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/txt_address_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/oswald_light"
+            android:includeFontPadding="false"
+            android:text="Graciliano Ramos"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bt_dismiss_info"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/cancel"
+        android:tint="@color/colorPrimaryDark"
+        android:elevation="1dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_name_info"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:fontFamily="@font/oswald_light"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Duda"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:elevation="1dp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/header_info_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/header_white_16dp"
+        android:backgroundTint="@color/white2"
+        android:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img_photo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/header_info_dialog"
+        android:src="@drawable/image_placeholder" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/img_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/bt_message"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/mail"
+            android:tint="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bt_facebook"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/facebook"
+            android:tint="@color/colorPrimaryDark"
+            app:layout_constraintStart_toEndOf="@id/bt_message"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/bt_phone"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/phone"
+            android:tint="@color/colorPrimaryDark"
+            app:layout_constraintStart_toEndOf="@id/bt_facebook"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bt_twitter"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/twitter"
+            android:tint="@color/colorPrimaryDark"
+            app:layout_constraintStart_toEndOf="@id/bt_phone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

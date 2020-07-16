@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.example.petapp">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/app_logo"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/app_logo"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/keyMaps" />
+
+        <service android:name=".GeofenceTransitionsIntentService" />
+
+        <activity android:name=".AddPet">
+
+        </activity>
+
+        <activity android:name=".MapActivity">
+
+        </activity>
+
+        <activity android:name=".LeashCodeRead">
+
+        </activity>
+
+        <activity android:name=".PasswordRecovery" />
+
+        <activity android:name=".EditPet" />
+
+        <activity android:name=".LeashCodeAdd" />
+
+        <activity android:name=".Enter">
+
+        </activity>
+
+        <activity android:name=".LogIn" />
+
+        <activity android:name=".NewHome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Profile" />
+
+    </application>
+
+</manifest>

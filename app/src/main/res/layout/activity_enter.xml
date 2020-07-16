@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/largeLabel"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="@font/grand"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:outlineProvider="none"
+        android:paddingTop="3dp"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:visibility="invisible"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/paw_logo"
+        android:tint="@color/colorBackground"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald_extra"
+            android:text="Já possui uma conta?"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/Bt_Go_To_Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald_extra"
+            android:paddingStart="4dp"
+            android:text="Clique aqui."
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+
+        android:layout_marginBottom="16dp"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:background="@drawable/background_green_border"
+        android:fontFamily="@font/oswald_light"
+        android:hint="Confirme sua Senha"
+        android:includeFontPadding="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="14dp"
+        android:textColor="@color/colorBackground"
+        android:textColorHint="@color/colorBackground"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/Bt_SignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_green_border"
+        android:fontFamily="@font/oswald_light"
+        android:hint="Senha"
+        android:imeOptions="actionDone"
+        android:includeFontPadding="false"
+        android:inputType="textPassword"
+        android:paddingStart="14dp"
+        android:textColor="@color/colorBackground"
+        android:textColorHint="@color/colorBackground"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_green_border"
+        android:fontFamily="@font/oswald_light"
+        android:imeOptions="actionDone"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorBackground"
+        android:includeFontPadding="false"
+        android:paddingStart="14dp"
+        android:textColorHint="@color/colorBackground"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText6"
+        app:layout_constraintEnd_toEndOf="@+id/editText5"
+        app:layout_constraintStart_toStartOf="@+id/editText5" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_green_border"
+        android:focusedByDefault="false"
+        android:fontFamily="@font/oswald_light"
+        android:hint="Email"
+        android:imeOptions="actionDone"
+        android:includeFontPadding="false"
+        android:inputType="textEmailAddress"
+        android:paddingStart="14dp"
+        android:textColor="@color/colorBackground"
+        android:textColorHint="@color/colorBackground"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText8"
+        app:layout_constraintEnd_toEndOf="@+id/editText5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Bt_SignUp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:cardBackgroundColor="@color/colorBackground"
+        app:cardCornerRadius="18dp"
+        android:defaultFocusHighlightEnabled="true"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/oswald_light"
+            android:paddingBottom="2dp"
+            android:text="Cadastrar"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/facebook"
+            android:tint="@color/colorBackground" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/twitter"
+            android:tint="@color/colorBackground" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="12dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/google"
+                android:tint="@color/colorBackground" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

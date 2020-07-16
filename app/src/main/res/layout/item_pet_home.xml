@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+    android:elevation="1dp"
+    android:outlineProvider="background"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pa"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="4dp"
+        android:background="@drawable/header_white_16dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:elevation="4dp"
+            android:outlineProvider="none"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/Bt_Qr"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:src="@drawable/scanner"
+                android:tint="@color/colorBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Icon_Sex"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:elevation="2dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/female"
+                android:tint="@color/colorBackground"
+                app:layout_constraintBottom_toBottomOf="@+id/Txt_Age"
+                app:layout_constraintStart_toEndOf="@+id/view1x"
+                app:layout_constraintTop_toTopOf="@+id/Txt_Age" />
+
+            <ImageView
+                android:id="@+id/Pet_Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/dog"
+                android:tint="@color/colorBackground"
+                app:layout_constraintBottom_toBottomOf="@+id/Txt_Age"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Txt_Name" />
+
+            <View
+                android:id="@+id/view1x"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorBackground"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Pet_Icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/Txt_Age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/oswald_light"
+                    android:gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:includeFontPadding="false"
+                    android:text="9 anos"
+                    android:textColor="@color/colorBackground"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Icon_Sex" />
+
+            <TextView
+                android:id="@+id/Txt_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/oswald_light"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Duda"
+                android:textColor="@color/colorBackground"
+                android:textScaleX="1."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/view1x"
+                app:layout_constraintTop_toTopOf="@+id/view1x" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBackground"
+        android:elevation="3dp"
+        android:outlineProvider="none"
+        app:layout_constraintEnd_toEndOf="@id/pa"
+        app:layout_constraintStart_toStartOf="@id/pa"
+        app:layout_constraintTop_toBottomOf="@id/pa" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:elevation="2dp"
+        android:outlineProvider="none"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_white_16dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

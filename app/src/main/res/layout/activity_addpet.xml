@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_header_maps"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Bt_Delete"
+            android:layout_width="40dp"
+            app:cardCornerRadius="20dp"
+            android:visibility="gone"
+            android:layout_height="40dp"
+            android:outlineProvider="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorBackground"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:src="@drawable/trash"
+                android:tint="@color/colorPrimary"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/Bt_Add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:outlineProvider="none"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/arrow"
+            android:tint="@color/colorBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/grand"
+            android:gravity="center"
+            android:text="PetApp"
+            android:textColor="#FFFFFF"
+            android:paddingTop="3dp"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/Bt_Add_Pet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/Edt_Date"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/background_white_18dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:fontFamily="@font/oswald_light"
+            android:gravity="center_vertical"
+            android:hint="Data de Nascimento"
+            android:includeFontPadding="false"
+            android:paddingStart="34dp"
+            android:imeOptions="actionDone"
+            android:textColor="@color/white2"
+            android:textColorHint="@color/white2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:outlineProvider="none"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:src="@drawable/calendar_add_pet"
+                android:tint="@color/colorPrimary" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Bt_Cat"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintStart_toEndOf="@+id/Bt_Dog"
+        app:layout_constraintTop_toBottomOf="@+id/Bt_Pick">
+
+        <TextView
+            android:id="@+id/Txt_Cat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/background_white_18dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:fontFamily="@font/oswald_light"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingStart="34dp"
+            android:text="Gato"
+            android:textColor="@color/white2"
+            android:textColorHint="@color/white2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Card_Cat"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:outlineProvider="none"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/Img_Cat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:src="@drawable/cat"
+                android:tint="@color/colorPrimary" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Bt_O"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Bt_Cat"
+        app:layout_constraintTop_toBottomOf="@+id/Bt_Pick">
+
+        <TextView
+            android:id="@+id/Txt_O"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingEnd="8dp"
+            android:focusable="false"
+            android:fontFamily="@font/oswald_light"
+            android:gravity="center_vertical"
+            android:background="@drawable/background_white_18dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:includeFontPadding="false"
+            android:paddingStart="34dp"
+            android:text="Outro"
+            android:textColor="@color/white2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Card_O"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:outlineProvider="none"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/Img_O"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:src="@drawable/question"
+                android:tint="@color/colorPrimary" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Bt_Dog"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bt_Pick">
+
+        <TextView
+            android:id="@+id/Txt_Dog"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/background_white_18dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:fontFamily="@font/oswald_light"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingStart="34dp"
+            android:text="Cachorro"
+            android:textColor="@color/white2"
+            android:textColorHint="@color/white2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Card_Dog"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:outlineProvider="none"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/Img_Dog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:src="@drawable/dog"
+                android:tint="@color/colorPrimary" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/xx"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header_maps">
+
+        <EditText
+            android:id="@+id/Edt_Name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:imeOptions="actionDone"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/oswald_light"
+            android:gravity="center_vertical"
+            android:background="@drawable/background_white_18dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:includeFontPadding="false"
+            android:paddingStart="34dp"
+            android:hint="Nome"
+            android:textColor="@color/white2"
+            android:textColorHint="@color/white2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="16dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:elevation="1dp"
+                android:padding="2.5dp"
+                android:src="@drawable/paw"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Bt_Sexes"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout8"
+       >
+
+        <Spinner
+            android:id="@+id/Spin_Sex"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="26dp"
+            android:backgroundTint="@color/white2"
+            android:fontFamily="@font/oswald_light"
+            android:gravity="center_vertical"
+            android:hint="Nome"
+            android:includeFontPadding="false"
+            android:overlapAnchor="false"
+            android:popupBackground="@drawable/bottom_8dp"
+            android:popupTheme="@style/spinnerS"
+            android:textColor="@color/white2"
+            android:textColorHint="@color/white2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:outlineProvider="none"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:elevation="1dp"
+                android:padding="2dp"
+                android:src="@drawable/gender"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Bt_Pick"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xx">
+
+        <TextView
+            android:id="@+id/Txt_Img"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingEnd="10dp"
+            android:maxLength="26"
+            android:background="@drawable/background_white_18dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:fontFamily="@font/oswald_light"
+            android:gravity="center_vertical"
+            android:hint="Selecione uma Imagem"
+            android:includeFontPadding="false"
+            android:paddingStart="10dp"
+            android:textColor="@color/white2"
+            android:textColorHint="@color/white2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/cardd" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardd"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:outlineProvider="none"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:elevation="1dp"
+                android:padding="2dp"
+                android:src="@drawable/image_white"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Bt_Add_Pet"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="@color/colorBackground"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/oswald_light"
+            android:includeFontPadding="false"
+            android:text="Salvar"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:imeOptions="actionDone"
+        android:background="@drawable/background_white_18dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:fontFamily="@font/oswald_light"
+        android:gravity="top"
+        android:hint="Mais Informações (Opcional)"
+        android:includeFontPadding="false"
+        android:paddingStart="34dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/white2"
+        android:textColorHint="@color/white2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Bt_Sexes"
+        app:layout_constraintTop_toBottomOf="@id/Bt_Dog" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginStart="10dp"
+        android:outlineProvider="none"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintTop_toTopOf="@+id/editText3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:src="@drawable/add_white"
+            android:tint="@color/colorPrimary" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

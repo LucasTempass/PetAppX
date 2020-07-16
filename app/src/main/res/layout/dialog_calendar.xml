@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout_dialog_edit_event"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="328dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_24dp"
+    android:backgroundTint="#F8F8F8">
+
+    <View
+        android:id="@+id/header_edit_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/header_white_24dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt_right_action"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/trash_icon"
+        android:tint="@color/white2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_edit_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/header_edit_dialog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_month"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/background_white_8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/oswald_light"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/TxtMonth"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_add_event_name"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/bt_add_time"
+        android:layout_width="60dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/background_green_8dp"
+        android:fontFamily="@font/oswald_light"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/TxtHour"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_add_event_name"
+        app:layout_constraintEnd_toStartOf="@+id/txt_month" />
+
+
+    <EditText
+        android:id="@+id/edt_add_event_name"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/background_white_8dp"
+        android:fontFamily="@font/oswald_light"
+        android:hint="@string/TxtEventName"
+        android:padding="6dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingStart="12dp"
+        android:textColor="#AFAAAA"
+        android:textColorHint="#AFAAAA"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_add_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_edit_dialog"
+        android:inputType="text" />
+
+    <com.example.petapp.CustomCalendarView
+            android:id="@+id/calendar_edit"
+            android:layout_width="0dp"
+            android:layout_height="280dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_add_event_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/bt_add_event"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_save_event"
+        app:layout_constraintStart_toStartOf="@id/img_save_event"
+        app:layout_constraintEnd_toEndOf="@id/txt_save_event"
+        app:layout_constraintTop_toTopOf="@id/img_save_event"/>
+
+    <ImageView
+        android:id="@+id/img_save_event"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/save"
+        android:tint="@color/white2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_edit_dialog"
+        app:layout_constraintStart_toStartOf="@+id/header_edit_dialog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_save_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="1dp"
+        android:textScaleX="1.1"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:fontFamily="@font/oswald_light"
+        android:text="@string/TxtSave"
+        android:textColor="@color/white2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_edit_dialog"
+        app:layout_constraintStart_toEndOf="@+id/img_save_event"
+        app:layout_constraintTop_toTopOf="@+id/header_edit_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

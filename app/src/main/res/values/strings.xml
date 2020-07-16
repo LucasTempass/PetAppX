@@ -1,0 +1,55 @@
+<resources>
+
+    <string name="app_name">PetApp</string>
+
+    <string name="TxtChannelDescription">Okay</string>
+    <string name="TxtHour">Hora</string>
+    <string name="TxtMonth">Mês</string>
+    <string name="TxtEventName">Nome do evento</string>
+    <string name="TxtAdd">Adicionar</string>
+    <string name="TxtSave">Salvar</string>
+    <string name="TxtFemale">Fêmea</string>
+    <string name="TxtMale">Macho</string>
+    <string name="TxtUnknownName">Nome desconhecido</string>
+    <string name="TxtGender">Sexo</string>
+    <string name="TxtSelectMissingPet">Selecione seu Pet Perdido</string>
+
+    <string name="ToastSelectTime">Por favor selecione um Horário</string>
+    <string name="MsgRequestingPermission">A permissão não está disponível, solicitando permissão de câmera</string>
+    <string name="MsgCameraAcess">O acesso à câmera é necessário para exibir a imagem</string>
+    <string name="MsgPermissionDenied">O pedido de permissão de câmera foi negado</string>
+    <string name="MsgCodeNotRegistered">Código não registrado</string>
+    <string name="MsgInvalidQR">Código QR inválido</string>
+    <string name="MsgTurnOnGPS">Ative s eu GPS, localizacão desconhecida</string>
+    <string name="MsgLocationNotFound">Não foi possível acessar sua localização</string>
+    <string name="MsgDeviceNotSupported">Seu dispositivo não é suportado</string>
+    <string name="MsgNotification">Existem animais perdidos na sua região.</string>
+    <string name="MsgUnknownDistance">Distância desconhecida</string>
+    <string name="MsgErrorLocation">Endereço não encontrado</string>
+    <string name="MsgErrorGps">Localização desconhecida</string>
+    <string name="MsgInvalidAddress">Endereco inválido</string>
+    <string name="MsgSelectSpecies">Selecione uma Espécie</string>
+    <string name="MsgSelectGender">Selecione um Sexo</string>
+    <string name="MsgInvalidDate">Data Inválida</string>
+
+    <string name="KeyChannelName">PetMissingAlert</string>
+    <string name="KeyChannelID">Alerta</string>
+    <string name="KEY_NAMES_LIST">NAMESLIST</string>
+    <string name="KEY_PET_LIST">PetList</string>
+    <string name="KEY_EVENT_LIST">Events</string>
+    <string name="KEY_TIME">TIME</string>
+    <string name="KEY_PET">PET</string>
+    <string name="KEY_POSITION">POSITION</string>
+    <string name="KEY_BITMAP">BITMAP</string>
+    <string name="KEY_LONGIT">LONG</string>
+    <string name="KEY_LAT">LAT</string>
+    <string name="KEY_SPINNER">SPINNER</string>
+    <string name="KEY_ID">ID</string>
+    <string name="TxtDefaultExtra">Sem Informacão Adicional</string>
+    <string name="TxtDefaultLeashCode">Sem Ecoleira</string>
+    <string name="KEY_ACTION">ACTION</string>
+    <string name="MsgInvalidQRCode">Código QR Inválido</string>
+    <string name="KEY_EVENT">EVENT</string>
+    <string name="TxtDefaultUsername">Lucas Tempass</string>
+
+</resources>

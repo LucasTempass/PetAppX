@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/x">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="54dp">
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edt_background"
+                android:enabled="false"
+                android:fontFamily="@font/oswald_light"
+                android:gravity="center_vertical"
+                android:hint="Número"
+                android:includeFontPadding="false"
+                android:paddingStart="36dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/xx" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edt_background"
+                android:enabled="false"
+                android:fontFamily="@font/oswald_light"
+                android:gravity="center_vertical"
+                android:hint="Twitter"
+                android:includeFontPadding="false"
+                android:paddingStart="36dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText12" />
+
+
+            <EditText
+                android:id="@+id/xx"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edt_background"
+                android:enabled="false"
+                android:fontFamily="@font/oswald_light"
+                android:gravity="center_vertical"
+                android:hint="Instagram"
+                android:includeFontPadding="false"
+                android:paddingStart="36dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/insta"
+                android:tint="@color/gray2"
+                app:layout_constraintBottom_toBottomOf="@+id/xx"
+                app:layout_constraintStart_toStartOf="@+id/xx"
+                app:layout_constraintTop_toTopOf="@+id/xx" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/twitter"
+                android:tint="@color/gray2"
+                app:layout_constraintBottom_toBottomOf="@+id/editText9"
+                app:layout_constraintStart_toStartOf="@+id/xx"
+                app:layout_constraintTop_toTopOf="@+id/editText9" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/phone"
+                android:tint="@color/gray2"
+                app:layout_constraintBottom_toBottomOf="@+id/editText12"
+                app:layout_constraintStart_toStartOf="@+id/xx"
+                app:layout_constraintTop_toTopOf="@+id/editText12" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/check"
+                android:tint="@color/gray2"
+                app:layout_constraintBottom_toBottomOf="@+id/editText9"
+                app:layout_constraintEnd_toEndOf="@+id/xx"
+                app:layout_constraintTop_toTopOf="@+id/editText9" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/check"
+                android:tint="@color/gray2"
+                android:elevation="2dp"
+                android:outlineProvider="none"
+                app:layout_constraintBottom_toBottomOf="@+id/editText7"
+                app:layout_constraintEnd_toEndOf="@+id/xx"
+                app:layout_constraintTop_toTopOf="@+id/editText7"  />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/check"
+                android:tint="@color/gray2"
+                app:layout_constraintBottom_toBottomOf="@+id/xx"
+                app:layout_constraintEnd_toEndOf="@+id/xx"
+                app:layout_constraintTop_toTopOf="@+id/xx"  />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/check"
+                android:tint="@color/gray2"
+                app:layout_constraintBottom_toBottomOf="@+id/editText12"
+                app:layout_constraintEnd_toEndOf="@+id/xx"
+                app:layout_constraintTop_toTopOf="@+id/editText12" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:enabled="false"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edt_background"
+                android:fontFamily="@font/oswald_light"
+                android:hint="Facebook"
+                android:paddingBottom="3dp"
+                android:includeFontPadding="false"
+                android:paddingStart="36dp"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/editText6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view21" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/facebook"
+                android:tint="@color/gray2"
+                android:layout_marginStart="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editText7"
+                app:layout_constraintStart_toStartOf="@+id/editText7"
+                app:layout_constraintTop_toTopOf="@+id/editText7"/>
+
+            <View
+                android:id="@+id/view19"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Bt_Edit_User"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="24dp"
+                android:outlineProvider="none"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="22dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view21"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/Img_Edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@drawable/edit_white"
+                    android:tint="@color/colorBackground"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:outlineProvider="none"
+                app:cardCornerRadius="44dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view19">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"
+                    android:src="@drawable/user_profile"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/view17"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="44dp"
+                android:background="@color/colorBackground"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView9"
+                app:layout_constraintTop_toBottomOf="@+id/view19" />
+
+            <EditText
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:elevation="1dp"
+                android:background="@color/colorBackground"
+                android:fontFamily="@font/oswald_light"
+                android:includeFontPadding="false"
+                android:outlineProvider="none"
+                android:text="Lucas Tempass"
+                android:textColor="@color/gray"
+                android:enabled="false"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/cardView9"
+                app:layout_constraintTop_toBottomOf="@+id/cardView9" />
+
+            <EditText
+                android:id="@+id/textView13"
+                android:enabled="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/oswald_light"
+                android:background="@android:color/transparent"
+                android:includeFontPadding="false"
+                android:outlineProvider="none"
+                android:paddingBottom="16dp"
+                android:text="lucas.tempass@hotmail.com"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/cardView9"
+                app:layout_constraintTop_toBottomOf="@+id/cardView9" />
+
+            <View
+                android:id="@+id/view21"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorBackground"
+                app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/view17" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/grand"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingTop="3dp"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view19"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_appbar"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:background="@color/white2"
+        app:fabCradleMargin="8dp"
+        app:elevation="0dp"
+        app:fabCradleRoundedCornerRadius="16dp"
+        app:backgroundTint="@color/colorBackground"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="4.6">
+
+            <LinearLayout
+                android:id="@+id/layout_bottom_home"
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/map" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mapa"
+                    android:fontFamily="@font/oswald_light"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bottom_member"
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@drawable/scanner_home"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scanner"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bottom_list"
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@drawable/home"
+                    android:backgroundTint="@color/colorPrimary" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bottom_chat"
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="1dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@drawable/leave"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sair"
+                    android:textSize="10sp"
+                    android:layout_marginTop="1dp"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAB_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_white"
+        app:tint="@color/white2"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        app:borderWidth="0dp"
+        app:fabCustomSize="64dp"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/bottom_appbar"
+        app:rippleColor="@color/colorPrimary" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

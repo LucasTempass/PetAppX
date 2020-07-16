@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="224dp"
+
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_white_16dp"
+    android:backgroundTint="#F8F8F8">
+
+    <View
+        android:id="@+id/header_time_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/header_green_16dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bt_add_time"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_add_time"
+        app:layout_constraintEnd_toEndOf="@+id/txt_add_time"
+        app:layout_constraintStart_toStartOf="@id/img_add_time"
+        app:layout_constraintTop_toTopOf="@id/img_add_time" />
+
+    <ImageView
+        android:id="@+id/bt_exit_time_dialog"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/cancel"
+        android:tint="@color/white2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_time_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/header_time_dialog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_add_time"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/add_icon"
+        android:tint="@color/white2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_time_dialog"
+        app:layout_constraintStart_toStartOf="@+id/header_time_dialog"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_add_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:fontFamily="@font/oswald_light"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginBottom="1dp"
+        android:textScaleX="1.1"
+        android:layout_marginStart="6dp"
+        android:includeFontPadding="false"
+        android:text="@string/TxtAdd"
+        android:textColor="@color/white2"
+        app:layout_constraintBottom_toBottomOf="@+id/header_time_dialog"
+        app:layout_constraintStart_toEndOf="@+id/img_add_time"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_time_dialog" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
