@@ -80,7 +80,7 @@ public class PlacePickerActivity extends DialogTranslucent implements OnMapReady
         iMapView.getMapAsync(this);
         ePetsNames = new ArrayList<>();
         addAllNames(eNames);
-        ePetsNames.add(eActivity.getString(R.string.TxtSelectMissingPet));
+        ePetsNames.add(eActivity.getString(R.string.MsgSelectMissingPet));
         Spinner iSpinner = findViewById(R.id.spinner);
         SpinnerAdapter iSpinnerAdapter = new SpinnerAdapter(eActivity.getApplicationContext(), ePetsNames, R.layout.item_spinner);
         iSpinner.setAdapter(iSpinnerAdapter);
@@ -89,7 +89,7 @@ public class PlacePickerActivity extends DialogTranslucent implements OnMapReady
         eMarker = findViewById(R.id.marker_image_view);
         FloatingActionButton iFab = findViewById(R.id.marker);
         iFab.setOnClickListener(v -> {
-            if (iSpinner.getSelectedItem().toString().matches(eActivity.getString(R.string.TxtSelectMissingPet)))
+            if (iSpinner.getSelectedItem().toString().matches(eActivity.getString(R.string.MsgSelectMissingPet)))
                 iSpinner.performClick();
             else {
                 if (eAdresses != null) {

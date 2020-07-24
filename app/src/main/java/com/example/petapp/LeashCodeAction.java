@@ -106,7 +106,7 @@ public class LeashCodeAction extends AppCompatActivity implements ActivityCompat
     
     protected void requestCameraPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA))
-            Snackbar.make(eViewGroup, "\n" + getString(R.string.MsgCameraAcess), Snackbar.LENGTH_INDEFINITE).
+            Snackbar.make(eViewGroup, "\n" + getString(R.string.MsgCameraAccess), Snackbar.LENGTH_INDEFINITE).
                     setAction("OK", view -> ActivityCompat
                             .requestPermissions(LeashCodeAction.this, new String[]{Manifest.permission.CAMERA}, C_CAMERA_PERMISSION)).show();
         else {

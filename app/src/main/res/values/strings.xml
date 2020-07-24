@@ -12,11 +12,43 @@
     <string name="TxtMale">Male</string>
     <string name="TxtUnknownName">Unknown Name</string>
     <string name="TxtGender">Gender</string>
-    <string name="TxtSelectMissingPet">Select your missing pet</string>
+    <string name="TxtDog">Dog</string>
+    <string name="TxtName">Name</string>
+    <string name="TxtExtraInfoOptional">Extra info (optional)</string>
+    <string name="TxtOther">Other</string>
+    <string name="TxtCat">Cat</string>
+    <string name="TxtPassword">Password</string>
+    <string name="TxtConfirmPassword">Confirm your password</string>
+    <string name="TxtAlreadyAccount">Already have an account?</string>
+    <string name="TxtClickHere">Click here.</string>
+    <string name="TxtEvents">Events</string>
+    <string name="TxtMyPets">My Pets</string>
+    <string name="TxtMap">Map</string>
+    <string name="TxtScanner">Scanner</string>
+    <string name="TxtProfile">Profile</string>
+    <string name="TxtExit">Exit</string>
+    <string name="TxtHome">Home</string>
+    <string name="TxtPhoneNumber">Phone number</string>
+    <string name="TxtAlignLeashCode">Center the leash code\nin order to add it.</string>
+    <string name="TxtScan">Scan</string>
+    <string name="TxtAlarmDeactivated">Alarm not set</string>
+    <string name="TxtYears"> years</string>
+    <string name="TxtMonths"> months</string>
+    <string name="Txt0Years">0 years</string>
+    <string name="TxtBirthDate">Birth date</string>
+    <string name="TxtDefaultExtra">No additional info</string>
+    <string name="TxtDefaultAge">9 years</string>
+    <string name="TxtDefaultPetName">Duda</string>
+    <string name="TxtDefaultLeashCode">No leash</string>
+    <string name="TxtDefaultUsername">Lorem Ipsum</string>
 
+
+
+    <string name="MsgSelectMissingPet">Select your missing pet</string>
+    <string name="MsgSelectImage">Select an image</string>
     <string name="ToastSelectTime">Please select the time</string>
     <string name="MsgRequestingPermission">Permission has not been granted, requesting camera access</string>
-    <string name="MsgCameraAcess">Camera access is needed to start the scanner</string>
+    <string name="MsgCameraAccess">Camera access is needed to start the scanner</string>
     <string name="MsgPermissionDenied">Camera access request was denied</string>
     <string name="MsgCodeNotRegistered">Code not found</string>
     <string name="MsgInvalidQR">Invalid code</string>
@@ -45,39 +77,9 @@
     <string name="KEY_LAT">LAT</string>
     <string name="KEY_SPINNER">SPINNER</string>
     <string name="KEY_ID">ID</string>
-    <string name="TxtDefaultExtra">No additional info</string>
-    <string name="TxtDefaultLeashCode">No leash</string>
     <string name="KEY_ACTION">ACTION</string>
     <string name="MsgInvalidQRCode">Invalid code</string>
     <string name="KEY_EVENT">EVENT</string>
-    <string name="TxtDefaultUsername">Lucas Tempass</string>
-    <string name="TxtBirthdate">Birthdate</string>
-    <string name="TxtDog">Dog</string>
-    <string name="TxtName">Name</string>
-    <string name="name">Name</string>
-    <string name="TxtSelectImage">Select an image</string>
-    <string name="TxtExtraInfoOptional">Extra info (optional)</string>
-    <string name="TxtOther">Other</string>
-    <string name="TxtCat">Cat</string>
-    <string name="TxtPassword">Password</string>
-    <string name="TxtConfirmPassword">Confirm your password</string>
-    <string name="TxtAlreadyAccount">Already have an account?</string>
-    <string name="TxtClickHere">Click here.</string>
-    <string name="TxtEvents">Events</string>
-    <string name="TxtMyPets">My Pets</string>
-    <string name="TxtMap">Map</string>
-    <string name="TxtScanner">Scanner</string>
-    <string name="TxtProfile">Profile</string>
-    <string name="TxtExit">Exit</string>
-    <string name="TxtHome">Home</string>
-    <string name="TxtPhoneNumber">Phone number</string>
-    <string name="TxtAlignLeashCode">Center the leash code\nin order to add it.</string>
-    <string name="TxtScan">Scan</string>
-    <string name="TxtAlarmDeactivated">Alarm not set</string>
-    <string name="TxtPlaceholderAge">9 years</string>
-    <string name="PlaceholderPetName">Duda</string>
-    <string name="TxtYears">\" Years\"</string>
-    <string name="TxtMonths">\" months\"</string>
-    <string name="Txt0Years">0 years</string>
+
 
 </resources>
