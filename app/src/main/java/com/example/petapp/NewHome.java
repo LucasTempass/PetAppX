@@ -32,7 +32,7 @@ public class NewHome extends Activity {
     private int C_KEY_ADD;
     
     private ArrayList<Pet> ePets;
-    private ArrayList<Evento> eEvents;
+    private ArrayList<Event> eEvents;
     
     private SharedPreferences.Editor eEditor;
     private SharedPreferences ePrefs;
@@ -82,7 +82,7 @@ public class NewHome extends Activity {
             iPet = ePets.get(eLayoutManager.findLastVisibleItemPosition());
             iPet.setImage(null);
         }
-        catch (ArrayIndexOutOfBoundsException e) { }
+        catch (ArrayIndexOutOfBoundsException iIgnored) { }
         return iPet;
         
     }
@@ -120,9 +120,9 @@ public class NewHome extends Activity {
         
     }
     
-    private Evento getEventFromDialog(AddCalendarDialog iCalendarDialog) {
+    private Event getEventFromDialog(AddCalendarDialog iCalendarDialog) {
         Bundle iBundle = iCalendarDialog.getBundle();
-        return (Evento) iBundle.getSerializable("CHANGED_EVENT");
+        return (Event) iBundle.getSerializable("CHANGED_EVENT");
         
     }
     
@@ -141,15 +141,15 @@ public class NewHome extends Activity {
     }
     
     private void initializeEvents() {
-        ArrayList<Evento> iObjectsEvents = getEventFromPersistence();
+        ArrayList<Event> iObjectsEvents = getEventFromPersistence();
         eEvents = iObjectsEvents != null ? iObjectsEvents : new ArrayList<>();
         
     }
     
-    private ArrayList<Evento> getEventFromPersistence() {
+    private ArrayList<Event> getEventFromPersistence() {
         Gson iGsonEvents = new Gson();
         String iJsonEvents = ePrefs.getString(getString(R.string.KEY_EVENT_LIST), "");
-        Type iTypeEvent = new TypeToken<ArrayList<Evento>>() { }.getType();
+        Type iTypeEvent = new TypeToken<ArrayList<Event>>() { }.getType();
         return iGsonEvents.fromJson(iJsonEvents, iTypeEvent);
         
     }
@@ -224,8 +224,8 @@ public class NewHome extends Activity {
         eBtnAdd.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), AddPet.class)));
         eBtnScan.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), LeashCodeRead.class)));
         eBtnLeave.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Enter.class)));
-        eBtnMap.setOnClickListener(view -> generateNamesListIntent(MapActivity.class));
-        eBtnProfile.setOnClickListener(view -> generateNamesListIntent(Profile.class));
+        eBtnMap.setOnClickListener(view -> generateNamesListIntent(new Intent(getApplicationContext(), MapActivity.class)));
+        eBtnProfile.setOnClickListener(view -> generateNamesListIntent(new Intent(getApplicationContext(), Profile.class)));
         
     }
     
@@ -278,10 +278,9 @@ public class NewHome extends Activity {
         
     }
     
-    private void generateNamesListIntent(Class iDestination) {
+    private void generateNamesListIntent(Intent iIntent) {
         Bundle iExtras = new Bundle();
         iExtras.putSerializable(getString(R.string.KEY_NAMES_LIST), getNamesList(ePets));
-        Intent iIntent = new Intent(getApplicationContext(), iDestination);
         iIntent.putExtra(getString(R.string.KEY_NAMES_LIST), iExtras);
         startActivity(iIntent);
         

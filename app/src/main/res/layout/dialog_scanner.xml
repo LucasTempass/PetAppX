@@ -26,7 +26,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/oswald_extra"
-            android:text="Alinhe o código da coleira\nao leitor para adicionar."
+            android:text="@string/TxtAlignLeashCode"
             android:textAlignment="center"
             android:includeFontPadding="false"
             android:textColor="#FFF"
@@ -70,7 +70,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/oswald_light"
                 android:paddingBottom="2dp"
-                android:text="Escanear"
+                android:text="@string/TxtScan"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 

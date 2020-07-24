@@ -14,7 +14,7 @@ public class AddCalendarDialog extends CalendarDialog {
     
     public AddCalendarDialog(Activity a) {
         super(a);
-        eEvent = new Evento();
+        eEvent = new Event();
         initializeDate();
         
     }

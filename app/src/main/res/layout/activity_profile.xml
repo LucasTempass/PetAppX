@@ -28,7 +28,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/oswald_light"
                 android:gravity="center_vertical"
-                android:hint="Número"
+                android:hint="@string/TxtPhoneNumber"
                 android:includeFontPadding="false"
                 android:paddingStart="36dp"
                 android:paddingBottom="3dp"
@@ -362,7 +362,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mapa"
+                    android:text="@string/TxtMap"
                     android:fontFamily="@font/oswald_light"
                     android:textSize="10sp"
                     android:textColor="@color/gray"
@@ -387,7 +387,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Scanner"
+                    android:text="@string/TxtScanner"
                     android:textSize="10sp"
                     android:textColor="@color/gray"
                     android:layout_gravity="center_horizontal|center_vertical"/>
@@ -419,7 +419,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home"
+                    android:text="@string/TxtHome"
                     android:textSize="10sp"
                     android:textColor="@color/gray"
                     android:layout_gravity="center_horizontal|center_vertical"/>
@@ -445,7 +445,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sair"
+                    android:text="@string/TxtExit"
                     android:textSize="10sp"
                     android:layout_marginTop="1dp"
                     android:textColor="@color/gray"

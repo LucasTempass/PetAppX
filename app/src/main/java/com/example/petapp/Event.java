@@ -2,7 +2,7 @@ package com.example.petapp;
 
 import java.io.Serializable;
 
-public class Evento implements Serializable {
+public class Event implements Serializable {
     
     private String name;
     private Boolean isSet;
@@ -10,9 +10,9 @@ public class Evento implements Serializable {
     private String day;
     private String time;
     
-    public Evento() { }
+    public Event() { }
     
-    public Evento(String iName, Boolean isSet, String iMonth, String iDay, String iTime) {
+    public Event(String iName, Boolean isSet, String iMonth, String iDay, String iTime) {
         this.name = iName;
         this.isSet = isSet;
         this.month = iMonth;

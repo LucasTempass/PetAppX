@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder> {
     
@@ -37,17 +38,6 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
             iHolder.eImgSex.setImageDrawable(eContext.getDrawable(R.drawable.male));
         iHolder.eTxtName.setText(iPetMissing.getName());
         iHolder.eTxtAge.setText(generateAgeFormatted(iPetMissing.getAge()));
-        //iHolder.xBt_Edit.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View v) {
-        //        xIntent = new Intent(eContext, EditPet.class);
-        //        iPetMissing.setImage(null);
-        //        xIntent.putExtra("Pet", iPetMissing);
-        //        xIntent.putExtra("Pos", iPosition);
-        //        xIntent.putExtra("BitmapImage", iPetMissing.getImage());
-        //        eContext.startActivity(xIntent);
-        //    }
-        //});
         iHolder.eBtnScan.setOnClickListener(v -> {
             eDialog = eDialog == null ? new QRDialog(eContext) : eDialog;
             eDialog.show();
@@ -81,8 +71,8 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
         iBirthDayCalendar.setTime(iDate);
         iTodayCalendar.setTime(new Date());
         int iIntraYears = iTodayCalendar.get(Calendar.YEAR) - iBirthDayCalendar.get(Calendar.YEAR);
-        return iIntraYears == 0 ? iIntraYears * 12 + (iTodayCalendar.get(Calendar.MONTH) - iBirthDayCalendar.get(Calendar.MONTH)) + " Meses" :
-               iIntraYears < 0 ? "0 Anos" : (long) iIntraYears + " Anos";
+        return iIntraYears == 0 ? iIntraYears * 12 + (iTodayCalendar.get(Calendar.MONTH) - iBirthDayCalendar.get(Calendar.MONTH)) + eContext.getString(R.string.TxtMonths) :
+               iIntraYears < 0 ? eContext.getString(R.string.Txt0Years) : (long) iIntraYears + eContext.getString(R.string.TxtYears);
         
     }
     
@@ -101,6 +91,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
             eTxtName = iView.findViewById(R.id.Txt_Name);
             eTxtAge = iView.findViewById(R.id.Txt_Age);
             eBtnScan = iView.findViewById(R.id.Bt_Qr);
+            
         }
         
     }

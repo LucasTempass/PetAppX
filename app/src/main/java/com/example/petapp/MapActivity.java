@@ -89,6 +89,16 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         eMapAdapter = new MapAdapter(getSupportFragmentManager(), ePetMissings, getApplicationContext());
         eMvp = new MapViewPager(vMapFragment, iViewPager, eMapAdapter, getApplicationContext());
         eGeofenceList.add(createGeofenceDwell("Id", -29.7693232, -51.13459619, 500, 1000000, 10));
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         iClientGeoFence.addGeofences(getGeofencingRequest(), getGeofencePendingIntent());
         ImageView iBtnReturnMap = findViewById(R.id.bt_return_map);
         iBtnReturnMap.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), NewHome.class)));

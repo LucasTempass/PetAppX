@@ -16,7 +16,7 @@ public class EditCalendarDialog extends CalendarDialog {
     
     public EditCalendarDialog(Activity iActivity, Bundle iBundle) {
         super(iActivity);
-        eEvent = (Evento) iBundle.getSerializable(iActivity.getString(R.string.KEY_EVENT));
+        eEvent = (Event) iBundle.getSerializable(iActivity.getString(R.string.KEY_EVENT));
         initializeDate();
         
     }

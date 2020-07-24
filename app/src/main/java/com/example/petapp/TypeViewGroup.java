@@ -12,7 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class TypeViewGroup {
     
     private Resources eResources;
-    private Context context;
     private TextView textView;
     private ImageView imageView;
     private CardView cardView;
@@ -24,9 +23,8 @@ public class TypeViewGroup {
         imageView = iImageView;
         cardView = iCardView;
         constraintLayout = iConstraintLayout;
-        context = iContext;
         //TODO||| Maybe switch context for resources|||
-        eResources = context.getResources();
+        eResources = iContext.getResources();
         eIsSelected = false;
         
     }

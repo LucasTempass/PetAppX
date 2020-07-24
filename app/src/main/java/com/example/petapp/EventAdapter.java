@@ -18,14 +18,14 @@ import java.util.ArrayList;
 public class EventAdapter extends BaseAdapter implements View.OnClickListener {
     
     private Activity eContext;
-    private ArrayList<Evento> eItens;
+    private ArrayList<Event> eItens;
     private Bundle eBundle;
     private EditCalendarDialog eEditDialog;
     private SharedPreferences.Editor eEditor;
     private String eJson;
     private Gson eGson;
     
-    EventAdapter(Activity iContext, ArrayList<Evento> iItens) {
+    EventAdapter(Activity iContext, ArrayList<Event> iItens) {
         this.eContext = iContext;
         this.eItens = iItens;
         eBundle = new Bundle();
@@ -70,7 +70,7 @@ public class EventAdapter extends BaseAdapter implements View.OnClickListener {
     
     @Override
     public void onClick(View iView) {
-        Evento iEvent = eItens.get((Integer) iView.getTag());
+        Event iEvent = eItens.get((Integer) iView.getTag());
         SharedPreferences iPrefs = eContext.getPreferences(Context.MODE_PRIVATE);
         eEditor = iPrefs.edit();
         eBundle.putSerializable("EVENT", iEvent);
@@ -79,7 +79,7 @@ public class EventAdapter extends BaseAdapter implements View.OnClickListener {
         eEditDialog.setOnDismissListener(dialog -> {
             if (eEditDialog.isDone()) {
                 Bundle iBundle = eEditDialog.getBundle();
-                eItens.set((Integer) iView.getTag(), (Evento) iBundle.getSerializable("CHANGED_EVENT"));
+                eItens.set((Integer) iView.getTag(), (Event) iBundle.getSerializable("CHANGED_EVENT"));
             }
             else if (eEditDialog.wasDeleted())
                 eItens.remove(((Integer) iView.getTag()).intValue());

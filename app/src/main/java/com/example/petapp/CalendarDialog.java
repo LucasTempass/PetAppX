@@ -19,7 +19,7 @@ public abstract class CalendarDialog extends DialogTranslucent {
     protected EditText eEdtName;
     protected CustomCalendarView eCalendar;
     protected Date eDate;
-    protected Evento eEvent;
+    protected Event eEvent;
     private Activity eContext;
     private Bundle eBundle;
     private boolean eIsDone = false;

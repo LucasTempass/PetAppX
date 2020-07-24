@@ -134,12 +134,10 @@ public class LeashCodeAction extends AppCompatActivity implements ActivityCompat
     
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode != C_CAMERA_PERMISSION)
-            return;
+        if (requestCode != C_CAMERA_PERMISSION) return;
         if (grantResults[0] == PackageManager.PERMISSION_GRANTED)
             createView();
-        else
-            Toast.makeText(getApplicationContext(), R.string.MsgPermissionDenied, Toast.LENGTH_LONG).show();
+        else Toast.makeText(getApplicationContext(), R.string.MsgPermissionDenied, Toast.LENGTH_LONG).show();
         
     }
     

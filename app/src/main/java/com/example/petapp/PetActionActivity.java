@@ -23,6 +23,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Objects;
 
 public abstract class PetActionActivity extends Activity {
     
@@ -56,8 +57,7 @@ public abstract class PetActionActivity extends Activity {
         String iName = this.eEdtName.getText().toString();
         if (isDifferent(iName, ""))
             return iName;
-        else
-            throw new PetException("NAME");
+        else throw new PetException("NAME");
         
     }
     
@@ -65,8 +65,7 @@ public abstract class PetActionActivity extends Activity {
         String iGender = eSpinner.getSelectedItem().toString();
         if (isDifferent(iGender, getApplicationContext().getString(R.string.TxtGender)))
             return iGender.matches(getApplicationContext().getString(R.string.TxtFemale));
-        else
-            throw new PetException(getApplicationContext().getString(R.string.MsgSelectGender));
+        else throw new PetException(getApplicationContext().getString(R.string.MsgSelectGender));
         
     }
     
@@ -74,8 +73,7 @@ public abstract class PetActionActivity extends Activity {
         String iDate = eDate.getText().toString();
         if (isValidDate(iDate))
             return iDate;
-        else
-            throw new PetException(getApplicationContext().getString(R.string.MsgInvalidDate));
+        else throw new PetException(getApplicationContext().getString(R.string.MsgInvalidDate));
         
     }
     
@@ -86,8 +84,7 @@ public abstract class PetActionActivity extends Activity {
     protected int getType() throws PetException {
         if (isValidType(eSelectedType))
             return eSelectedType;
-        else
-            throw new PetException(getApplicationContext().getString(R.string.MsgSelectSpecies));
+        else throw new PetException(getApplicationContext().getString(R.string.MsgSelectSpecies));
         
     }
     
@@ -108,7 +105,7 @@ public abstract class PetActionActivity extends Activity {
     //TODO ||| REMAKE |||
     protected String getFileName(Uri iUri) {
         String iResult = null;
-        if (iUri.getScheme().equals("content"))
+        if (Objects.equals(iUri.getScheme(), "content"))
             try (Cursor iCursor = getContentResolver().query(iUri, null, null, null, null)) {
                 if (iCursor != null && iCursor.moveToFirst())
                     iResult = iCursor.getString(iCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
@@ -144,11 +141,9 @@ public abstract class PetActionActivity extends Activity {
                 return false;
             if (iAgeInMonths == 0)
                 return iAgeInDays >= 0;
-            else
-                return true;
+            else return true;
         }
-        else
-            return true;
+        else return true;
         
     }
     

@@ -25,11 +25,9 @@ public class LeashCodeRead extends LeashCodeAction {
                 intent.putExtra("NUMBER", text);
                 startActivity(intent);
             }
-            else
-                Toast.makeText(getApplicationContext(), R.string.MsgCodeNotRegistered, Toast.LENGTH_LONG).show();
+            else Toast.makeText(getApplicationContext(), R.string.MsgCodeNotRegistered, Toast.LENGTH_LONG).show();
         }
-        else
-            Toast.makeText(getApplicationContext(), R.string.MsgInvalidQR, Toast.LENGTH_LONG).show();
+        else Toast.makeText(getApplicationContext(), R.string.MsgInvalidQR, Toast.LENGTH_LONG).show();
         
     }
     
