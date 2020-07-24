@@ -15,23 +15,22 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.Locale;
 
 public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder> {
     
     private Activity eContext;
-    private ArrayList<Pet> ePet;
+    private ArrayList<Pet> ePets;
     private QRDialog eDialog;
     
-    PetsAdapter(Activity iContext, ArrayList<Pet> iPetMissings) {
+    PetsAdapter(Activity iContext, ArrayList<Pet> iMissingPets) {
         this.eContext = iContext;
-        this.ePet = iPetMissings;
+        this.ePets = iMissingPets;
         
     }
     
     @Override
     public void onBindViewHolder(PetViewHolder iHolder, int iPosition) {
-        Pet iPetMissing = ePet.get(iPosition);
+        Pet iPetMissing = ePets.get(iPosition);
         if (iPetMissing.getType() != 0)
             iHolder.eImgPet.setImageDrawable(eContext.getDrawable(iPetMissing.getType() == 1 ? R.drawable.cat : R.drawable.question));
         if (!iPetMissing.isGender())
@@ -47,7 +46,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
     
     @Override
     public int getItemCount() {
-        return ePet.size();
+        return ePets.size();
     }
     
     @Override
@@ -71,8 +70,9 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
         iBirthDayCalendar.setTime(iDate);
         iTodayCalendar.setTime(new Date());
         int iIntraYears = iTodayCalendar.get(Calendar.YEAR) - iBirthDayCalendar.get(Calendar.YEAR);
-        return iIntraYears == 0 ? iIntraYears * 12 + (iTodayCalendar.get(Calendar.MONTH) - iBirthDayCalendar.get(Calendar.MONTH)) + eContext.getString(R.string.TxtMonths) :
-               iIntraYears < 0 ? eContext.getString(R.string.Txt0Years) : (long) iIntraYears + eContext.getString(R.string.TxtYears);
+        return iIntraYears == 0 ? iIntraYears * 12 + (iTodayCalendar.get(Calendar.MONTH) - iBirthDayCalendar.get(Calendar.MONTH)) + " " + eContext
+                .getString(R.string.TxtMonths) :
+               iIntraYears < 0 ? eContext.getString(R.string.Txt0Years) : (long) iIntraYears + " " + eContext.getString(R.string.TxtYears);
         
     }
     

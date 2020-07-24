@@ -177,7 +177,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/oswald_light"
             android:paddingBottom="2dp"
-            android:text="Cadastrar"
+            android:text="@string/TxtRegister"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
 

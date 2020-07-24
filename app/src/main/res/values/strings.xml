@@ -32,8 +32,8 @@
     <string name="TxtAlignLeashCode">Center the leash code\nin order to add it.</string>
     <string name="TxtScan">Scan</string>
     <string name="TxtAlarmDeactivated">Alarm not set</string>
-    <string name="TxtYears"> years</string>
-    <string name="TxtMonths"> months</string>
+    <string name="TxtYears">years</string>
+    <string name="TxtMonths">months</string>
     <string name="Txt0Years">0 years</string>
     <string name="TxtBirthDate">Birth date</string>
     <string name="TxtDefaultExtra">No additional info</string>
@@ -80,6 +80,11 @@
     <string name="KEY_ACTION">ACTION</string>
     <string name="MsgInvalidQRCode">Invalid code</string>
     <string name="KEY_EVENT">EVENT</string>
+    <string name="TxtFacebook">Facebook</string>
+    <string name="TxtInstagram">Instagram</string>
+    <string name="TxtTwitter">Twitter</string>
+    <string name="TxtDefaultEmail">lorem.ipsum@hotmail.com</string>
+    <string name="TxtRegister">Register</string>
 
 
 </resources>
