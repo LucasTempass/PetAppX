@@ -1,4 +1,4 @@
-# PetAppX - MOCK VERSION
+# PetAppX - UNDER RECONSTRUCTION
 An app focused on pets.
 
 Glitches and noise are due to GIF compression and quality;
